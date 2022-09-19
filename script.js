@@ -135,32 +135,25 @@ deleteButton.addEventListener('click', button => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // main keys
 window.addEventListener('keydown', (event) =>{
     if (event.key == "Enter") {
-        console.log(event.key)
+        if (event.key == "Enter") {
+            calculator.compute()
+            calculator.updateDisplay()
+        }
     }
 })
 window.addEventListener('keydown', (event) =>{
     if (event.key == "Backspace") {
-        console.log(event.key)
+        calculator.delete()
+        calculator.updateDisplay()
+    }
+})
+window.addEventListener('keydown', (event) =>{
+    if (event.key == "Delete") {
+        calculator.clear()
+        calculator.updateDisplay()
     }
 })
 window.addEventListener('keydown', (event) =>{
@@ -174,22 +167,28 @@ window.addEventListener('keydown', (event) =>{
 // symbols
 window.addEventListener('keydown', (event) =>{
     if (event.key == "+") {
-        console.log(event.key)
+        calculator.chooseOperation("+")
+        calculator.updateDisplay()
     }
 })
 window.addEventListener('keydown', (event) =>{
     if (event.key == "-") {
-        console.log(event.key)
+        calculator.chooseOperation("-")
+        calculator.updateDisplay()
     }
 })
 window.addEventListener('keydown', (event) =>{
     if (event.key == "*" || event.key == "x") {
-        console.log(event.key)
+        if(event.key == "x" || event.key == "*"){
+            calculator.chooseOperation("*")
+            calculator.updateDisplay()
+        }
     }
 })
 window.addEventListener('keydown', (event) =>{
     if (event.key == "/") {
-        console.log(event.key)
+        calculator.chooseOperation("/")
+        calculator.updateDisplay()
     }
 })
 
@@ -198,56 +197,83 @@ window.addEventListener('keydown', (event) =>{
 // numbers
 window.addEventListener('keydown', (event) =>{
     if (event.key == "0") {
-        console.log(event.key)
+        if(event.key == 0){
+            calculator.appendNumber(0)
+            calculator.updateDisplay()
+        }
     }
 })
 window.addEventListener('keydown', (event) =>{
     if (event.key == "1") {
-        console.log(event.key)
+        if(event.key == 1){
+            calculator.appendNumber(1)
+            calculator.updateDisplay()
+        }
     }
 })
 window.addEventListener('keydown', (event) =>{
     if (event.key == "2") {
-        console.log(event.key)
+        if(event.key == 2){
+            calculator.appendNumber(2)
+            calculator.updateDisplay()
+        }
     }
 })
 window.addEventListener('keydown', (event) =>{
     if (event.key == "3") {
-        console.log(event.key)
+        if(event.key == 3){
+            calculator.appendNumber(3)
+            calculator.updateDisplay()
+        }
     }
 })
 window.addEventListener('keydown', (event) =>{
     if (event.key == "4") {
-        console.log(event.key)
+        if(event.key == 4){
+            calculator.appendNumber(4)
+            calculator.updateDisplay()
+        }    
     }
 })
 window.addEventListener('keydown', (event) =>{
     if (event.key == "5") {
-        console.log(event.key)
+        if(event.key == 5){
+            calculator.appendNumber(5)
+            calculator.updateDisplay()
+        }
     }
 })
 window.addEventListener('keydown', (event) =>{
     if (event.key == "6") {
-        console.log(event.key)
+        if(event.key == 6){
+            calculator.appendNumber(6)
+            calculator.updateDisplay()
+        }
     }
 })
 window.addEventListener('keydown', (event) =>{
     if (event.key == "7") {
-        console.log(event.key)
+        if(event.key == 7){
+            calculator.appendNumber(7)
+            calculator.updateDisplay()
+        }
     }
 })
 window.addEventListener('keydown', (event) =>{
     if (event.key == "8") {
-        console.log(event.key)
+        if(event.key == 8){
+            calculator.appendNumber(8)
+            calculator.updateDisplay()
+        }
     }
 })
 window.addEventListener('keydown', (event) =>{
     if (event.key == "9") {
-        console.log(event.key)
+        if(event.key == 9){
+            calculator.appendNumber(9)
+            calculator.updateDisplay()
+        }
     }
 })
-
-
-
 
 
